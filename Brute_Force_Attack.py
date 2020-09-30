@@ -26,7 +26,7 @@ def string_input():
 	made_key 변수의 값을 zipfile_check에서 입력받은 경로의 zip파일 압축해제시 필요한 pwd 값에 대입.
 	틀리면 다음 문자열로 변경, 맞으면 그 문자열 리턴.
 	'''
-	#사용할 함수:
+	#사용할 함수 목록:
 	#extractall('Zip_route', pwd = 'make_string()')
 	#try/except
 	#return
