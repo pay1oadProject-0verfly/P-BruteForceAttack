@@ -5,6 +5,9 @@ Brute_Force_Attack 프로젝트.
 모르는 내용은 다같이 회의해봅시다!
 
 '''
+
+#리턴 값을 어떻게 하실건지, 미리 적어주세요!
+
 import zipfile  #zip파일 읽기 및 압축 해제 기능이 포함된 모듈.
 
 def zipfile_cheak():
@@ -23,12 +26,13 @@ def string_input():
 	made_key 변수의 값을 zipfile_check에서 입력받은 경로의 zip파일 압축해제시 필요한 pwd 값에 대입.
 	틀리면 다음 문자열로 변경, 맞으면 그 문자열 리턴.
 	'''
-	made_key = make_string()
-
-
+	#사용할 함수:
+	#extractall('Zip_route', pwd = 'make_string()')
+	#try/except
+	#return
+	#for
 
 def main():
-	
 	
 if __name__ == "__main__":
 	main()
