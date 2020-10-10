@@ -8,9 +8,11 @@ Brute_Force_Attack 프로젝트.
 
 #리턴 값을 어떻게 하실건지, 미리 적어주세요!
 
-import zipfile
+import zipfile  #zip파일 읽기 및 압축 해제 기능이 포함된 모듈.
 import os
-
+def zipfile_cheak():
+	#1번 파트, 해독할 파일 경로 찾기 및 zip파일 판정하기.
+	#김민주, 김정윤
 file_path = input("파일 경로를 입력하세요: ") #파일 경로 입력받기
 
 if(os.path.exists(file_path)==True): #파일 경로가 존재하는지 확인 > True일시 if문 진행
@@ -22,10 +24,6 @@ if(os.path.exists(file_path)==True): #파일 경로가 존재하는지 확인 > 
         print("zip 파일이 아닙니다.") #zip파일이 아닐 경우 zip파일이 아닙니다 출력
 else:
     print("존재하지 않는 파일입니다.") #경로 내에 해당 파일이 존재하지 않을경우 존재하지 않는 파일입니다 입력
-
-
-
-
 
 def make_string():
 	#2번 파트, 문자열 생성
@@ -54,9 +52,7 @@ def string_input():
 		except Exception:
 			print('실패: ', i)
 			pass
-
-
-
+			
 def main():
 	
 if __name__ == "__main__":
