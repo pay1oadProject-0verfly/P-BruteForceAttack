@@ -94,7 +94,7 @@ def string_input():
 	made_key = ['1', '2', '3', '4', '5', '6', '7', '8', '9']		#임시로 테스트
 	for i in made_key:			#나중에 make_string에서 for문쓸지 여기서 for문쓸지 정하기
 		try:
-			z.extractall(pwd=bytes(i, 'utf-8'))기			#pwd를 그냥 입력하면 오류가 걸려 bytes 취해주기
+			z.extractall(pwd=bytes(i, 'utf-8'))			#pwd를 그냥 입력하면 오류가 걸려 bytes 취해주기
 			print('성공! 암호는 ' + i)
 			exit(0)			#나중에 return으로 바꾸
 		except Exception:
