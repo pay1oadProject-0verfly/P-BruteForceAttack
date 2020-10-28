@@ -3,7 +3,6 @@ pay1oad 프로젝트 팀 0verfly.
 Brute_Force_Attack 프로젝트.
 주석은 필수, 변수명은 목적에 따라,
 모르는 내용은 다같이 회의해봅시다!
-
 '''
 
 #리턴 값을 어떻게 하실건지, 미리 적어주세요!
@@ -11,6 +10,7 @@ Brute_Force_Attack 프로젝트.
 import zipfile  #zip파일 읽기 및 압축 해제 기능이 포함된 모듈.
 import os
 import itertools
+
 def zipfile_check():
   #1번 파트, 해독할 파일 경로 찾기 및 zip파일 판정하기.
 	#김민주, 김정윤
@@ -30,18 +30,21 @@ def zipfile_check():
             print("존재하지 않는 파일입니다.")  # 경로 내에 해당 파일이 존재하지 않을경우 존재하지 않는 파일입니다 입력경우 존재하지 않는 파일입니다 입력
 
 recieve = False #밑에 while문을 돌기 위해 False로 초기화
+minimum = 0
+maximum = 0
 
 #문자열의 조건 설정.
 def make_string():
 	#2번 파트, 문자열 생성
 	#박승민, 심승민
+    global minimum
+    global maximum
     string = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     print('현재 모든 숫자와 모든 알파벳이 준비되어있습니다.')
     print('시간절약을 위한 문자열을 다시 입력하겠습니까? [Y/N]')
 
     if answer == 'Y' or answer =='y':
-        string  =input("매칭에 사용할 문자열을 입력해주세요.")
-        return string
+        string  = input("매칭에 사용할 문자열을 입력해주세요.")
 
     elif answer == 'N' or answer == 'n':
         pass
@@ -50,12 +53,12 @@ def make_string():
         print('ERROR')
 
 #문자열의 길이 설정. (minimum, maximum)
-    print('문자열의 최소길이를 입력해주세요.') 
+    minimum = input("문자열의 최소길이를 입력해주세요.")
     if minimum <= 0:
         print('ERROR')
     else:
         pass
-    print('문자열의 최대길이를 입력해주세요.')
+    minimum = input("문자열의 최대길이를 입력해주세요.")
     if maximum >= minimum:
         pass
     else:
@@ -67,12 +70,16 @@ string_input과 연계하여 움직이는 def.
 string_input으로부터의 Fasle값 받기 필수.
 '''
 def matching_string():
-    while recieve == False: #string_input에서 recieve를 통한 False값 받음.
         for len in range(minimum, maximum):
             endTrying = itertools.product(string, repeat = len)
             for trying in endTrying:
                 password = ''.join(trying)
-                string_input(password)
+                if string_input(password) == 1:
+                    break
+                else:
+                    continue
+            break
+
         
     
 
