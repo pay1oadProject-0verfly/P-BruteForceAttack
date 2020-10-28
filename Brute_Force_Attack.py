@@ -66,7 +66,7 @@ string_input과 연계하여 움직이는 def.
 틀릴시엔 while문을 돌아야 하기 때문에
 string_input으로부터의 Fasle값 받기 필수.
 '''
-def matching_string()
+def matching_string():
     while recieve == False: #string_input에서 recieve를 통한 False값 받음.
         for len in range(minimum, maximum):
             endTrying = itertools.product(string, repeat = len)
