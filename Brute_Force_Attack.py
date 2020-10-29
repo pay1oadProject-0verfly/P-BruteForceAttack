@@ -23,17 +23,6 @@ def zipfile_check():
             if (zipfile.is_zipfile(file) == True):  # 파일이 zip파일인지 확인
                 print("zip 파일이 맞습니다.")  # 맞을경우 zip파일이 맞습니다 출력 > return 파일 경로 해야함 ...
                 return(os.path.abspath(file_path))# 절대경로를 반환
-
-            else:
-                print("zip 파일이 아닙니다.")  # zip파일이 아닐 경우 zip파일이 아닙니다 출력
-        else:
-            print("존재하지 않는 파일입니다.")  # 경로 내에 해당 파일이 존재하지 않을경우 존재하지 않는 파일입니다 입력경우 존재하지 않는 파일입니다 입력
-
-            
-recieve = False #밑에 while문을 돌기 위해 False로 초기화
-minimum = 0
-maximum = 0
-
             else:
                 print("zip 파일이 아닙니다.")  # zip파일이 아닐 경우 zip파일이 아닙니다 출력
         else:
