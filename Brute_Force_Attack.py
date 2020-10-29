@@ -89,7 +89,7 @@ def string_input(path, password):
         z.extractall(pwd=bytes(password, 'utf-8'))
         return 1
     except Exception:
-		pass
+		return 0
 
 
 
