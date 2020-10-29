@@ -6,7 +6,6 @@ Brute_Force_Attack 프로젝트.
 '''
 
 #리턴 값을 어떻게 하실건지, 미리 적어주세요!
-
 import zipfile  #zip파일 읽기 및 압축 해제 기능이 포함된 모듈.
 import os
 import itertools
@@ -29,9 +28,12 @@ def zipfile_check():
         else:
             print("존재하지 않는 파일입니다.")  # 경로 내에 해당 파일이 존재하지 않을경우 존재하지 않는 파일입니다 입력경우 존재하지 않는 파일입니다 입력
 
+            
 recieve = False #밑에 while문을 돌기 위해 False로 초기화
 minimum = 0
 maximum = 0
+
+
 
 #문자열의 조건 설정.
 def make_string():
